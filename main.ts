@@ -1,3 +1,9 @@
+/**
+ *  As per design the front end, we start with a fake database.
+ *  The "in" property tells us if the element is displayed in the table
+ *  The name and photos are HTML elements
+ *  The email and permissions are just string
+ */
 const db:Array<object> = [
     {in: true, name: "<span class=\"id-name\">Camille Lacheni</span>", photo: "<img src=\"assets/Atom/Avatar/Initial/mini.svg\" class=\"id-photo\"/>", email: "joe.joe@email.com", permission: "Owner"},
     {in: true, name: "<span class=\"id-name\">Claire Lecoleo</span>", photo: "<img src=\"assets/Atom/Avatar/Placeholder/mini.svg\" class=\"id-photo\"/>", email:"Jacob.ahtoewnay@seriousmail.com", permission: "Admin"},
@@ -10,12 +16,21 @@ const db:Array<object> = [
     {in: false, name: "<span class=\"id-name\">Olly</span>", photo: "<img src=\"assets/Atom/Avatar/Initial/mini.svg\" class=\"id-photo\"/>", email:"o.hunter@example.com", permission: "Standard"}
 ];
 
+// Helper to keep track of the number of entries in the table.
+// We start with 4 (that includes the headers) as it is used to know the index of the next row to add
+let sizeOfTable:number = 4;
 
-let sizeOfTable = 4; // starting size of the table;
-let binid = 3;
+// This is an little hack to know what bin we've clicked on when we want to delete a row.
+// We keep track of the id as we need to give new ones when adding a new row
+let binId:number = 3;
 
-
-const populateCells = (row:HTMLTableRowElement, index:number) => {
+/**
+ * Add the information of one person to a new row in the table
+ * |  Photo  Name   |  Email  | Permission |  Bin icon |
+ * @param row (HTML element) to fill
+ * @param index of person in the db
+ */
+const populateCells = (row:HTMLTableRowElement, index:number):void => {
     const cellName = row.insertCell(0);
     cellName.className = "identity";
     cellName.className += sizeOfTable < 1 ? " first-row" : "";
@@ -35,50 +50,66 @@ const populateCells = (row:HTMLTableRowElement, index:number) => {
     const cellBin = row.insertCell(3);
     cellBin.className = sizeOfTable < 1 ? " first-row" : "";
     cellBin.innerHTML = "<img src=\"assets/bin.svg\" class=\"bin\" id=\"bin\" onclick=\"deleteUser(this.id)\"/>";
-    document.getElementById("bin").id = "bin" + binid.toString();
-    binid++;
+    document.getElementById("bin").id = "bin" + binId.toString();
+    binId++;
     cellBin.align = "right";
 };
 
 
+/**
+ * Check if there are users left to add in the table
+ * If yes, create a new row and populate it
+ */
 const addNewUser = () => {
     let index:number = Math.floor(Math.random() * (db.length));
 
-    if(sizeOfTable < db.length + 1){
+    if(sizeOfTable < db.length){
+        // Try to find a person that is not already in the table
         while(db[index]["in"]){
-            console.log("already in the table");
             index = Math.floor(Math.random() * (db.length));
         }
         db[index]["in"] = true;
+
+        // Add the person to the table
         const table: HTMLTableElement = <HTMLTableElement> document.getElementById("table");
         const row:HTMLTableRowElement = table.insertRow(sizeOfTable);
         populateCells(row, index);
+
+        // Keep track of the size of the table and update the number of people in the table
         sizeOfTable++;
         updateMemberNumber();
-    }else{
-     //todo add error message?
     }
-
 };
 
-
+/**
+ * Find the user we are deleting to mark it as NOT in the table (anymore)
+ * And delete the row
+ * @param id passed through the click to find the user and the row to delete
+ */
 const deleteUser = (id:string) => {
+    // Find the user with the email we are deleting to mark it as not in the table
     const emailOfDeletedPerson = document.getElementById(id).parentElement.parentElement.children["1"].innerHTML;
-        for(let person of db){
-            if(person["email"] == emailOfDeletedPerson){
-                person["in"] = false;
-                break;
-            }
+    for(let person of db){
+        if(person["email"] == emailOfDeletedPerson){
+            person["in"] = false;
+            break;
         }
+    }
 
+    // Remove it
     document.getElementById(id).parentElement.parentElement.remove();
+
+    // Keep track of the size of the table and update the number of people in the table
     sizeOfTable--;
     updateMemberNumber();
 };
 
+/**
+ * Update the number of members in the table
+ */
 const updateMemberNumber = () => {
     document.getElementById("active-member").innerHTML = (sizeOfTable -1).toString();
-    document.getElementById("total-member").innerHTML = db.length.toString();
+    document.getElementById("total-member").innerHTML = (db.length -1).toString();
 };
 
 (() => {
