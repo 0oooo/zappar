@@ -31,23 +31,23 @@ let binId:number = 3;
  * @param index of person in the db
  */
 const populateCells = (row:HTMLTableRowElement, index:number):void => {
-    const cellName = row.insertCell(0);
+    const cellName:HTMLTableCellElement = row.insertCell(0);
     cellName.className = "identity";
     cellName.className += sizeOfTable < 1 ? " first-row" : "";
     cellName.innerHTML = db[index]["photo"];
     cellName.innerHTML += db[index]["name"];
 
-    const cellEmail = row.insertCell(1);
+    const cellEmail:HTMLTableCellElement = row.insertCell(1);
     cellEmail.className = "email";
     cellEmail.className += sizeOfTable < 1 ? " first-row" : "";
     cellEmail.innerHTML = db[index]["email"];
 
-    const cellPermission = row.insertCell(2);
+    const cellPermission:HTMLTableCellElement = row.insertCell(2);
     cellPermission.className = "permission";
     cellPermission.className += sizeOfTable < 1 ? " first-row" : "";
     cellPermission.innerHTML = db[index]["permission"];
 
-    const cellBin = row.insertCell(3);
+    const cellBin:HTMLTableCellElement = row.insertCell(3);
     cellBin.className = sizeOfTable < 1 ? " first-row" : "";
     cellBin.innerHTML = "<img src=\"assets/bin.svg\" class=\"bin\" id=\"bin\" onclick=\"deleteUser(this.id)\"/>";
     document.getElementById("bin").id = "bin" + binId.toString();
@@ -60,7 +60,7 @@ const populateCells = (row:HTMLTableRowElement, index:number):void => {
  * Check if there are users left to add in the table
  * If yes, create a new row and populate it
  */
-const addNewUser = () => {
+const addNewUser = ():void => {
     let index:number = Math.floor(Math.random() * (db.length));
 
     if(sizeOfTable < db.length){
@@ -86,9 +86,9 @@ const addNewUser = () => {
  * And delete the row
  * @param id passed through the click to find the user and the row to delete
  */
-const deleteUser = (id:string) => {
+const deleteUser = (id:string):void => {
     // Find the user with the email we are deleting to mark it as not in the table
-    const emailOfDeletedPerson = document.getElementById(id).parentElement.parentElement.children["1"].innerHTML;
+    const emailOfDeletedPerson:string = document.getElementById(id).parentElement.parentElement.children["1"].innerHTML;
     for(let person of db){
         if(person["email"] == emailOfDeletedPerson){
             person["in"] = false;
@@ -107,12 +107,12 @@ const deleteUser = (id:string) => {
 /**
  * Update the number of members in the table
  */
-const updateMemberNumber = () => {
+const updateMemberNumber = ():void => {
     document.getElementById("active-member").innerHTML = (sizeOfTable -1).toString();
     document.getElementById("total-member").innerHTML = (db.length -1).toString();
 };
 
-(() => {
+(():void => {
     window.addEventListener('load', (event) => {
         updateMemberNumber();
     });

@@ -6,7 +6,7 @@
  */
 var db = [
     { "in": true, name: "<span class=\"id-name\">Camille Lacheni</span>", photo: "<img src=\"assets/Atom/Avatar/Initial/mini.svg\" class=\"id-photo\"/>", email: "joe.joe@email.com", permission: "Owner" },
-    { "in": true, name: "<span class=\"id-name\">Claire Lecoleo</span>", photo: "<img src=\"assets/Atom/Avatar/Placeholder/mini.svg\" class=\"id-photo\"/>", email: "Jacob.ahtoewnay@seriousmail.com", permission: "Admin" },
+    { "in": true, name: "<span class=\"id-name\">Claire Lecoleo</span>", photo: "<img src=\"assets/Atom/Avatar/User/mini.svg\" class=\"id-photo\"/>", email: "Jacob.ahtoewnay@seriousmail.com", permission: "Admin" },
     { "in": true, name: "<span class=\"id-name\">Elie Labru</span>", photo: "<img src=\"assets/Atom/Avatar/User/mini.svg\" class=\"id-photo\"/>", email: ">mylishoe@shoemail.com", permission: "Standard" },
     { "in": false, name: "<span class=\"id-name\">Pending acceptance</span>", photo: "<img src=\"assets/Atom/Avatar/Placeholder/mini.svg\" class=\"id-photo\"/>", email: "j.dog@example.com", permission: "Standard" },
     { "in": false, name: "<span class=\"id-name\">Erica Badu</span>", photo: "<img src=\"assets/Atom/Avatar/Initial/mini.svg\" class=\"id-photo\"/>", email: "e.badu@example.com", permission: "Owner" },
