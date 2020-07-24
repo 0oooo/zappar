@@ -17,50 +17,6 @@ body{
     display: inline-block;
 }
 
-.main-table{
-    background:#FFFFFF;
-    border-radius: 12px;
-    box-shadow: 0px 0px 10px #f6f7f7;
-    overflow: hidden;
-}
-
-table{
-    margin-left: 15px;
-}
-
-#table{
-    width: 97%;
-}
-
-#table tbody td, #table thead th {
-    font-size: 14px;
-    height: 72px;
-    vertical-align: middle;
-}
-
-#table thead th {
-    border:none;
-    height: 72px;
-    font-size: 16px;
-    min-width: 25%;
-}
-
-#table tbody tr td{
-    border-top: 1px solid #CCCCCC;
-}
-
-#table thead th:first-child {
-    padding-left: 0px;
-}
-
-#table tbody tr:first-child td {
-    border-top: none;
-}
-
-#table tbody tr:last-child{
-    border-bottom: 1px solid #CCCCCC;
-}
-
 
 #logo{
     display: inline-block;
@@ -96,19 +52,36 @@ table{
     width: 12px;
 }
 
-#table tbody tr:hover td, #table tbody tr:hover th {
-    background: rgba(115, 180, 255, .09);
+.main-table{
+    background:#FFFFFF;
+    border-radius: 12px;
+    box-shadow: 0px 0px 10px #f6f7f7;
+    overflow: hidden;
 }
 
-.bin {
-    display: none;
-    visibility: hidden;
-    margin-right: 18px;
+table{
+    margin-left: 15px;
 }
 
-#table tbody tr:hover .bin{
-    display: block;
-    visibility: visible;
+#table{
+    width: 97%;
+}
+
+#table tbody td, #table thead th {
+    font-size: 14px;
+    height: 72px;
+    vertical-align: middle;
+}
+
+#table thead th {
+    border:none;
+    height: 72px;
+    font-size: 16px;
+    width: 25%;
+}
+
+#table thead th:first-child {
+    padding-left: 0px;
 }
 
 .helper {
@@ -117,8 +90,42 @@ table{
     vertical-align: middle;
 }
 
-.bin{
+#table tbody tr td{
+    border-top: 1px solid #CCCCCC;
+}
+
+#table tbody tr:hover td {
+    background: rgba(115, 180, 255, .09);
+}
+
+#table tbody tr:first-child td {
+    border-top: none;
+}
+
+#table tbody tr:last-child{
+    border-bottom: 1px solid #CCCCCC;
+}
+
+.id-photo{
+    margin-right: 10px;
+    margin-left: 8px;
+}
+
+.id-name{
+    vertical-align: inherit;
+}
+
+.bin {
+    display: none;
+    visibility: hidden;
+    margin-right: 18px;
     vertical-align: middle;
+    cursor: pointer;
+}
+
+#table tbody tr:hover .bin{
+    display: block;
+    visibility: visible;
 }
 
 .info{
@@ -142,13 +149,4 @@ table{
 .invite-text {
     font-size: 14px;
     font-weight: bold;
-}
-
-.id-photo{
-    margin-right: 10px;
-    margin-left: 8px;
-}
-
-.id-name{
-    vertical-align: inherit;
 }
