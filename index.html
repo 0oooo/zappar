@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,700' rel='stylesheet' type='text/css'>
+    <script src="main.js"></script>
+</head>
+
+<body>
+
+<div class="content">
+    <div class="head">
+        <div class="member">Members</div>
+        <div id="logo" onclick="addNewUser()">
+            <div id="circle"></div>
+            <div id="cross"></div>
+        </div>
+    </div>
+
+
+
+    <div class="main-table">
+        <table id="table">
+            <thead>
+            <tr>
+                <th scope="col">Team member</th>
+                <th scope="col">Email</th>
+                <th scope="col">Permission level</th>
+                <th scope="col"> <span class="helper"><img src="assets/hidden-bin.svg"/></span></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td class="first-row identity"><img src="assets/Atom/Avatar/Initial/mini.svg" class="id-photo"/><span class="id-name">Camille Lacheni</span></td>
+                <td class="first-row email">joe.joe@email.com</td>
+                <td class="first-row permission">Owner</td>
+                <td class="first-row" align="right"><img src="assets/bin.svg" class="bin" id="bin0" onclick="deleteUser(this.id)"/></td>
+            </tr>
+            <tr>
+                <td class="identity"><img src="assets/Atom/Avatar/Placeholder/mini.svg" class="id-photo"/><span class="id-name">Claire Lecoleo</span></td>
+                <td class="email">Jacob.ahtoewnay@seriousmail.com</td>
+                <td class="permission">Admin</td>
+                <td align="right"><img src="assets/bin.svg" class="bin" id="bin1" onclick="deleteUser(this.id)"/></td>
+            </tr>
+            <tr>
+                <td class="identity"><img src="assets/Atom/Avatar/User/mini.svg" class="id-photo"/><span class="id-name">Elie Labru</span></td>
+                <td class="email">mylishoe@shoemail.com</td>
+                <td class="permission">Standard</td>
+                <td align="right"><img src="assets/bin.svg" class="bin" id="bin2" onclick="deleteUser(this.id)"/></td>
+            </tr>
+            </tbody>
+        </table>
+
+        <div class="info">
+        <span class="active-members">
+            Your team has <span id="active-member"></span> / <span id="total-member"></span> active member<span id="plural-member"></span>.
+        </span>
+            <span class="invite" onclick="addNewUser()">
+                <span class="invite-logo"><img src="assets/user.svg"/></span>
+                <span class="invite-text">INVITE</span>
+            </span>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>

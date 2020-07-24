@@ -1,0 +1,154 @@
+body{
+    background:#FBFBFB;
+    color:#344B60;
+    font-family: 'Lato', sans-serif;
+}
+
+.content{
+    margin: 54px 135px 59px 136px;
+}
+
+.head {
+    margin-bottom: 24px;
+}
+
+.member{
+    font-size:28px;
+    display: inline-block;
+}
+
+.main-table{
+    background:#FFFFFF;
+    border-radius: 12px;
+    box-shadow: 0px 0px 10px #f6f7f7;
+    overflow: hidden;
+}
+
+table{
+    margin-left: 15px;
+}
+
+#table{
+    width: 97%;
+}
+
+#table tbody td, #table thead th {
+    font-size: 14px;
+    height: 72px;
+    vertical-align: middle;
+}
+
+#table thead th {
+    border:none;
+    height: 72px;
+    font-size: 16px;
+    min-width: 25%;
+}
+
+#table tbody tr td{
+    border-top: 1px solid #CCCCCC;
+}
+
+#table thead th:first-child {
+    padding-left: 0px;
+}
+
+#table tbody tr:first-child td {
+    border-top: none;
+}
+
+#table tbody tr:last-child{
+    border-bottom: 1px solid #CCCCCC;
+}
+
+
+#logo{
+    display: inline-block;
+    cursor: pointer;
+}
+
+#circle
+{
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    background: #CE3923;
+    position: absolute;
+    top: 57px;
+    left: 262px;
+}
+
+#cross {
+    background: #FFFFFF;
+    height: 12px;
+    position: absolute;
+    width: 2px;
+    top: 71px;
+    left: 281px;
+}
+#cross::after {
+    background: #FFFFFF;
+    content: "";
+    height: 2px;
+    left: -5px;
+    position: absolute;
+    top: 5px;
+    width: 12px;
+}
+
+#table tbody tr:hover td, #table tbody tr:hover th {
+    background: rgba(115, 180, 255, .09);
+}
+
+.bin {
+    display: none;
+    visibility: hidden;
+    margin-right: 18px;
+}
+
+#table tbody tr:hover .bin{
+    display: block;
+    visibility: visible;
+}
+
+.helper {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.bin{
+    vertical-align: middle;
+}
+
+.info{
+    margin: 20px 0 18px 20px;
+}
+
+.active-members{
+    font-size:14px;
+    color: #9B9B9B;
+}
+
+.invite{
+    cursor: pointer;
+}
+
+.invite-logo{
+    margin-left: 8px;
+    vertical-align: text-bottom;
+}
+
+.invite-text {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.id-photo{
+    margin-right: 10px;
+    margin-left: 8px;
+}
+
+.id-name{
+    vertical-align: inherit;
+}

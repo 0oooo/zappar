@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Atom / Avatar / Initial / mini</title>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="32" height="32" rx="9"></rect>
+        <linearGradient x1="66.0720274%" y1="59.1105779%" x2="8.69637392%" y2="27.4140183%" id="linearGradient-3">
+            <stop stop-color="#FC4552" offset="0%"></stop>
+            <stop stop-color="#FF737C" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="66.0720274%" y1="52.9632691%" x2="8.69637392%" y2="42.6537764%" id="linearGradient-4">
+            <stop stop-color="#FC4552" offset="0%"></stop>
+            <stop stop-color="#FF737C" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Atom-/-Avatar-/-Initial-/-mini">
+            <g id="Group-Copy">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="Mask"></g>
+                <rect id="Rectangle" fill="#CE3923" mask="url(#mask-2)" x="0" y="0" width="32" height="32" rx="9"></rect>
+                <g id="back_top" mask="url(#mask-2)" fill-opacity="0.4">
+                    <g transform="translate(-174.000000, -37.000000)">
+                        <g transform="translate(0.346171, 0.295302)">
+                            <g transform="translate(0.252971, 0.281879)">
+                                <path d="M179.71806,4.12019412e-14 L286.339444,4.12019412e-14 C296.832854,6.14670877e-14 305.339444,8.50658975 305.339444,19 C305.339444,19.4518294 305.323327,19.903515 305.291123,20.3541953 L301.046106,79.7623204 C300.298204,90.2290439 291.206955,98.107706 280.740231,97.3598045 C278.306164,97.1858778 275.92839,96.5446883 273.736876,95.4712825 L173.434244,46.3429577 C167.756607,43.5620456 163.834086,38.1392417 162.970069,31.8764539 L161.462274,20.9472744 C160.071303,10.8648826 167.117092,1.56388422 177.199484,0.172913043 C178.034069,0.0577731999 178.875569,3.78039906e-14 179.71806,4.12019412e-14 Z" id="Rectangle" fill="url(#linearGradient-3)" opacity="0.502446057"></path>
+                                <path d="M18.7343202,4.12019412e-14 L219.438371,4.12019412e-14 C229.931782,3.9274333e-14 238.438371,8.50658975 238.438371,19 C238.438371,19.7896539 238.389144,20.5785398 238.290974,21.3620677 L231.101728,78.7423076 C229.797194,89.1543127 220.299062,96.5373767 209.887057,95.2328428 C208.958117,95.1164547 208.03905,94.9315673 207.137367,94.6796915 L18.820196,42.0752837 C12.1917415,40.2236951 7.08275958,34.932419 5.464602,28.2431474 L3.35886856,19.5382949 C1.30471498,11.0466674 6.52331865,2.49762278 15.0149461,0.443469203 C16.2327991,0.148866415 17.481341,3.61030392e-14 18.7343202,4.12019412e-14 Z" id="Rectangle-Copy" fill="url(#linearGradient-4)" opacity="0.605705915" transform="translate(120.157242, 49.983510) scale(-1, 1) translate(-120.157242, -49.983510) "></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+                <text id="V" mask="url(#mask-2)" font-family="Lato-Regular, Lato" font-size="24" font-weight="normal" fill="#FFFFFF">
+                    <tspan x="7.876" y="25">V</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>
